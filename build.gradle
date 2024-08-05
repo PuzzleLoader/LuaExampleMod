@@ -1,8 +1,8 @@
 plugins {
     id "java"
     id "java-library"
-    id "cr_puzzle_gradle" version "1.1.0-dev"
-    id "com.github.johnrengelman.shadow"  version "8.1.1"
+    id "cr_puzzle_gradle"
+    id "com.github.johnrengelman.shadow"
 }
 
 puzzle_loader {
@@ -11,22 +11,24 @@ puzzle_loader {
 
 repositories {
     mavenCentral()
+    maven { url 'https://jitpack.io' }
 }
 
 tasks.register("runLoader", JavaExec) {
     group = "loader"
 
+    workingDir = "$projectDir/run"
+
     classpath = sourceSets.main.runtimeClasspath
-    mainClass = "dev.crmodders.puzzle.loader.launch.Piece"
+    mainClass = "com.github.puzzle.loader.launch.Piece"
 }
 
 dependencies {
+    mod "com.github.PuzzleLoader:puzzle-language-lua:1.0.0"
 }
 
 processResources {
-    def resourceTargets = [ // Locations of where to inject the properties
-                            "puzzle.mod.json"
-    ]
+    def resourceTargets = [ "puzzle.mod.json" ]
 
     // Left item is the name in the target, right is the varuable name
     def replaceProperties = [

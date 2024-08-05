@@ -6,12 +6,19 @@
   "authors": [
     "YOU :D"
   ],
+  "meta": {
+    "event_bus": {
+      "events": {
+        "OnRegisterBlockEvent": [ "" ]
+      }
+    }
+  },
   "entrypoints": {
-    "preInit": [
-      "org.example.exmod.ExampleModPreinit"
-    ],
     "init": [
-      "org.example.exmod.ExampleMod"
+      {
+        "adapter": "lua",
+        "value": "assets/example-mod/init.lua"
+      }
     ]
   },
   "mixins": [
