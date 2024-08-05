@@ -25,7 +25,8 @@
     "example.mixins.json"
   ],
   "dependencies": {
-    "cosmic-reach": ">=0.1.42"
+    "cosmic-reach": ">=0.1.42",
+    "puzzle-language-lua": ">=1.0.0"
   },
   "accessManipulator": "example_mod.manipulator"
 }
