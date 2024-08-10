@@ -24,7 +24,7 @@ tasks.register("runLoader", JavaExec) {
 }
 
 dependencies {
-    mod "com.github.PuzzleLoader:puzzle-language-lua:1.0.0"
+    mod "com.github.PuzzleLoader:puzzle-language-lua:$puzzle_language_lua_version"
 }
 
 processResources {

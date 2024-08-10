@@ -3,7 +3,7 @@ local CommandUtil = require "assets.puzzle-loader-lua.lua.bindings.CommandUtil"
 local CosmicReach = require "assets.puzzle-loader-lua.lua.bindings.CosmicReach"
 
 local dispatcher = CommandUtil:getCommandDispatcher()
-local literal = CommandUtil:makeLiteral("setBlockA")
+local literal = CommandUtil:makeLiteral("setBlock")
 
 local argX = CommandUtil:makeIntArgument("x")
 local argY = CommandUtil:makeIntArgument("y")
